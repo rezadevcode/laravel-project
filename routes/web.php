@@ -24,9 +24,9 @@ use Illuminate\Support\Facades\Route;
 
 // -- LANDING
 Route::group(['as' => 'landing.', 'middleware' => 'checklogin'], function () {
-    $ctrl = 'HomeController@';
-    Route::get('/', $ctrl.'index')->name('index'); // BASE URL
-    Route::get('/home', $ctrl.'index')->name('home');
+    Route::get('/','HomeController@index')->name('index'); // BASE URL
+    Route::get('/home','HomeController@index')->name('home');
+    Route::get('/logout', 'HomeController@signout');
 });
 
 Route::get('/login', 'LoginController@index');
