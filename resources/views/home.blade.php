@@ -25,11 +25,11 @@
                 <a class="navbar-brand" href="#">
                     <img src="{{ asset('images/logo/gojek.png') }}" alt="logo">
                 </a>
-                <!-- <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <img src="../../assets/icon/category/category.png" alt="ic-category">
+                                <img src="{{ asset('images/category/category.png') }}" alt="ic-category">
                                 <span>Category</span>
                             </a>
                         </li>
@@ -52,10 +52,10 @@
                         </li>
                         <div class="separator"></div>
                         <li class="nav-item">
-                            <img src="../../assets/icon/user.png" alt="user">
+                            <img src="{{ asset('images/icon/user.png') }}" alt="user">
                             <div class="dropdown">
                                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Jessy
+                                    {{ $result['name'] }}
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     <a class="dropdown-item" href="#">Profile</a>
@@ -64,7 +64,7 @@
                             </div>
                         </li>
                     </ul>
-                </div> -->
+                </div>
             </nav>
         </header>
         <!-- End Navbar Section -->

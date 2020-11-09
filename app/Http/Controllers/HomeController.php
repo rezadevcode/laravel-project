@@ -24,7 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        // dd($this->session);
-        return view('home');
+        $data['result'] = $this->session;
+        return view('home',$data);
     }
 }
