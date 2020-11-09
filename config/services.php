@@ -30,4 +30,10 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'google' => [
+        'client_id' => '611806263569-c4hm96affjftjsipchbf6e8055ollvrd.apps.googleusercontent.com',
+        'client_secret' => 'mchraaCO6IelM8VKEAueP0jQ',
+        'redirect' => 'http://gojek.me/auth/google/callback',
+    ],
+
 ];
