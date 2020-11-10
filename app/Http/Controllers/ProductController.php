@@ -19,11 +19,6 @@ class ProductController extends Controller
         $this->session = AppHelper::mem_cache();
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
     public function index()
     {
         $data['result'] = $this->session;
