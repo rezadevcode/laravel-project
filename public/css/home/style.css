@@ -137,6 +137,9 @@ section.product-list {
     border: 1px solid #D8E1E1;
     color: #676F6F;
 }
+.swiper-category .swiper-slide a{
+    color: #676F6F;
+}
 .swiper-category .swiper-slide img {
     height: 16px;
     margin-right: 8px;

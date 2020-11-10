@@ -32,3 +32,9 @@ Route::group(['as' => 'landing.', 'middleware' => 'checklogin'], function () {
 Route::get('/login', 'LoginController@index');
 Route::get('auth/google', 'Auth\GoogleController@redirectToGoogle');
 Route::get('auth/google/callback', 'Auth\GoogleController@handleGoogleCallback');
+
+// PRODUCT
+Route::group(['prefix' => 'product','middleware' => 'checklogin'], function () {
+    Route::get('/category', 'ProductController@category');
+    Route::get('/list', 'ProductController@lists');
+});

@@ -11,8 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="{{ asset('css/home/style.css') }}">
-    {{-- <link rel="stylesheet" href="../header.css">
-    <link rel="stylesheet" href="../footer.css"> --}}
+    <link rel="stylesheet" href="{{ asset('css/general.css') }}">
 </head>
 
 <body>
@@ -22,13 +21,13 @@
         <!-- Navbar Section -->
         <header>
             <nav class="navbar navbar-expand-lg fixed-top">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="{{ url('/') }}">
                     <img src="{{ asset('images/logo/gojek.png') }}" alt="logo">
                 </a>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a href="{{ url('product/category') }}">
                                 <img src="{{ asset('images/category/category.png') }}" alt="ic-category">
                                 <span>Category</span>
                             </a>
@@ -98,8 +97,10 @@
                 <div class="swiper-container swiper-category">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="{{ asset('images/category/category.png') }}" alt="ic-category">
-                            <span>All Category</span>
+                            <a href="{{ url('product/category') }}">
+                                <img src="{{ asset('images/category/category.png') }}" alt="ic-category">
+                                <span>All Category</span>
+                            </a>
                         </div>
                         <div class="swiper-slide">
                             <img src="{{ asset('images/category/accessories.png') }}" alt="ic-accessories">
