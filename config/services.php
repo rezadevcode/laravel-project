@@ -31,9 +31,9 @@ return [
     ],
 
     'google' => [
-        'client_id' => '611806263569-c4hm96affjftjsipchbf6e8055ollvrd.apps.googleusercontent.com',
-        'client_secret' => 'mchraaCO6IelM8VKEAueP0jQ',
-        'redirect' => 'http://gojek.me/auth/google/callback',
+        'client_id' => env('G_CLIENT_ID'),
+        'client_secret' => env('G_CLIENT_SECRET'),
+        'redirect' => env('G_CLIENT_REDIRECT'),
     ],
 
 ];
