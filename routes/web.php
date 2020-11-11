@@ -23,18 +23,18 @@ use Illuminate\Support\Facades\Route;
 // });
 
 // -- LANDING
-Route::group(['as' => 'landing.', 'middleware' => 'checklogin'], function () {
+Route::group(['as' => 'landing.'], function () {
     Route::get('/','HomeController@index')->name('index'); // BASE URL
     Route::get('/home','HomeController@index')->name('home');
     Route::get('/logout', 'HomeController@signout');
 });
 
 Route::get('/login', 'LoginController@index');
-Route::get('auth/google', 'Auth\GoogleController@redirectToGoogle');
-Route::get('auth/google/callback', 'Auth\GoogleController@handleGoogleCallback');
+// Route::get('auth/google', 'Auth\GoogleController@redirectToGoogle');
+// Route::get('auth/google/callback', 'Auth\GoogleController@handleGoogleCallback');
 
 // PRODUCT
-Route::group(['prefix' => 'product','middleware' => 'checklogin'], function () {
+Route::group(['prefix' => 'product'], function () {
     Route::get('/category', 'ProductController@category');
     Route::get('/list', 'ProductController@lists');
 });

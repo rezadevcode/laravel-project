@@ -16,24 +16,21 @@ class ProductController extends Controller
      */
     public function __construct()
     {
-        $this->session = AppHelper::mem_cache();
+        
     }
 
     public function index()
     {
-        $data['result'] = $this->session;
-        return view('home',$data);
+        return view('home');
     }
 
     public function lists()
     {
-        $data['result'] = $this->session;
-        return view('product/lists',$data);
+        return view('product/lists');
     }
 
     public function category()
     {
-        $data['result'] = $this->session;
-        return view('product/category',$data);
+        return view('product/category');
     }
 }

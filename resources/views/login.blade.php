@@ -20,7 +20,7 @@
             <div class="card-body">
                 <h1>Sign In</h1>
                 <p>Use your Google Account</p>
-                <a href="{{ url('auth/google') }}" type="button" class="btn btn-light">
+                <a href="{{ url('/home') }}" type="button" class="btn btn-light">
                     <img src="{{ asset('images/logo/google.png') }}" alt="logo-google">
                     Sign in with Google
                 </a>
