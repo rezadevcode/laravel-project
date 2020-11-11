@@ -30,8 +30,6 @@ Route::group(['as' => 'landing.'], function () {
 });
 
 Route::get('/login', 'LoginController@index');
-// Route::get('auth/google', 'Auth\GoogleController@redirectToGoogle');
-// Route::get('auth/google/callback', 'Auth\GoogleController@handleGoogleCallback');
 
 // PRODUCT
 Route::group(['prefix' => 'product'], function () {
