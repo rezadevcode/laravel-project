@@ -4,29 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404</title>
+    <title>Homepage</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="{{ asset('css/404.css') }}">
     <link rel="stylesheet" href="{{ asset('css/general.css') }}">
 </head>
-
 <body>
-
-    <div class="container">
-
+    {{-- <div class="container"> --}}
         <!-- Navbar Section -->
-       <header>
-            <nav class="navbar navbar-expand-lg fixed-top">
+        <header>
+            <nav class="navbar navbar-expand-lg">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <img src="{{ asset('images/logo/gojek.png') }}" alt="logo">
                 </a>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('product-category') }}">
+                            <a href="{{ url('product/category') }}">
                                 <img src="{{ asset('images/category/category.png') }}" alt="ic-category">
                                 <span>Category</span>
                             </a>
@@ -48,25 +46,25 @@
                         <li class="nav-item">
                             <i class="fas fa-shopping-cart"></i>
                         </li>
-                        {{-- <div class="separator"></div>
+                        <div class="separator"></div>
                         <li class="nav-item">
                             <img src="{{ asset('images/icon/user.png') }}" alt="user">
                             <div class="dropdown">
                                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    {{ $result['name'] }}
+                                    user name
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     <a class="dropdown-item" href="#">Profile</a>
-                                    <a class="dropdown-item" href="{{ url('/logout') }}">Sign Out</a>
+                                    <a class="dropdown-item" href="#">Sign Out</a>
                                 </div>
                             </div>
-                        </li> --}}
+                        </li>
                     </ul>
                 </div>
             </nav>
         </header>
         <!-- End Navbar Section -->
-
+    {{-- </div> --}}
         <!-- Main Content -->
         <main class="content">
             <div class="main-area">
@@ -77,7 +75,7 @@
         </main>
 
         
-    </div>
+    
 
     <footer>
         <p><strong>© 2020 Gojek</strong></p>

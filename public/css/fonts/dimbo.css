@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'Dimbo-Regular';
+    src:  url('Dimbo-Regular.ttf.woff') format('woff'),
+    url('Dimbo-Regular.ttf.svg#Dimbo-Regular') format('svg'),
+    url('Dimbo-Regular.ttf.eot'),
+    url('Dimbo-Regular.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}

@@ -19,18 +19,23 @@ class ProductController extends Controller
         
     }
 
-    public function index()
-    {
-        return view('home');
-    }
-
     public function lists()
     {
-        return view('product/lists');
+        $data['css'] = 'product/list/style.css';
+        $data['js'] = 'product/list/script.js';
+        return view('product/lists',$data);
     }
 
     public function category()
     {
-        return view('product/category');
+        $data['css'] = 'product/category/style.css';
+        return view('product/category',$data);
+    }
+
+    public function detail()
+    {
+        $data['css'] = 'product/detail/style.css';
+        $data['js'] = 'product/detail/script.js';
+        return view('product/detail',$data);
     }
 }

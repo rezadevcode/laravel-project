@@ -1,5 +1,47 @@
+/* -------------font------------------ */
+@font-face {
+    font-family: 'MaisonNeue';
+  src:  
+      url('fonts/MaisonNeueWEB-Book.woff2') format('woff2'),
+      url('fonts/MaisonNeueWEB-Book.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
+@font-face {
+    font-family: 'MaisonNeue-Bold';
+  src:  
+      url('fonts/MaisonNeueWEB-Bold.woff2') format('woff2'),
+      url('fonts/MaisonNeueWEB-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
 
+@font-face {
+    font-family: 'MaisonNeue-italic';
+  src:  
+      url('fonts/MaisonNeueWEB-BookItalic.woff2') format('woff2'),
+      url('fonts/MaisonNeueWEB-BookItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'MaisonNeue-Extended';
+  src:  
+      url('fonts/MaisonNeueExtendedWEB-Bold.woff2') format('woff2'),
+      url('fonts/MaisonNeueExtendedWEB-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+/* -------------end font------------------ */
+body{
+    font-family: 'MaisonNeue';
+    color: #1C1D1D;
+}
+.pd-0{
+    padding: 0;
+}
 .navbar {
     background: #FFFFFF;
     box-shadow: 0px 4px 15px rgba(51, 51, 51, 0.12);
@@ -11,9 +53,6 @@
 }
 .navbar img {
     height: 40px;
-}
-.navbar-collapse {
-
 }
 .navbar-collapse .navbar-nav {
     width: 100%;
@@ -28,10 +67,10 @@
     margin: auto 12px;
 }
 .navbar-collapse .navbar-nav .nav-item:nth-child(1) {
-    min-width: 20%;
+    min-width: 10%;
 }
 .navbar-collapse .navbar-nav .nav-item:nth-child(2) {
-    min-width: 30%;
+    min-width: 50%;
     margin-right: 36px;
 }
 .navbar-collapse .navbar-nav .nav-item:nth-child(6) {
@@ -61,7 +100,26 @@
     margin-left: 8px;
     color: #676F6F;
 }
-
+.title .breadcrumb .breadcrumb-item{
+    font-size: 14px;
+}
+.breadcrumb-item.active{
+    font-weight: 600;
+}
+.card-body{
+    padding: 10px 8px !important;
+}
+.product-list .card-body p{
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+.product-list .card a{
+    color: #1C1D1D;
+}
+.product-list .card p:last-child {
+    font-weight: 700;
+    color: #DB3D40;
+}
 
 .navbar-nav form {
 }
@@ -113,7 +171,8 @@ footer {
 }
 
 footer p {
-    font-size: 16px;
+    font-size: 15px;
+    margin: 0;
 }
 
 /* RESPONSIVENESS */

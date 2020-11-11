@@ -17,6 +17,7 @@ main section {
 }
 
 section .title {
+    font-family: 'MaisonNeue-Bold';
     font-size: 24px;
     line-height: 24px;
     color: #1C1D1D;
@@ -109,9 +110,19 @@ section.product-list {
 /* ----------------------------------------------------- */
 .swiper-hero .swiper-wrapper .swiper-slide {
     border-radius: 16px;
-    min-height: 300px;
+    /* min-height: 300px; */
 }
-.swiper-hero .swiper-wrapper .swiper-slide:nth-child(1) {
+.swiper-hero .swiper-wrapper .swiper-slide img{
+    border-radius: 23px;
+}
+.swiper-pagination-bullet{
+    opacity: 1 !important;
+    background: #ffffff;
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active{
+    background: #00AA13;
+}
+/* .swiper-hero .swiper-wrapper .swiper-slide:nth-child(1) {
     background-color: green;
 }
 .swiper-hero .swiper-wrapper .swiper-slide:nth-child(2) {
@@ -125,7 +136,7 @@ section.product-list {
 }
 .swiper-hero .swiper-wrapper .swiper-slide:nth-child(5) {
     background-color: silver;
-}
+} */
 
 
 .swiper-category .swiper-slide {
@@ -164,6 +175,8 @@ section.product-list {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 .swiper-popular .swiper-slide:first-child {
@@ -177,6 +190,7 @@ section.product-list {
     border-radius: 24px;
     background-color: #EEF3F1;
     color: #676F6F;
+    margin: 0 5px;
 }
 .swiper-popular .swiper-slide:not(:first-child).active {
     background-color: #00AA13;

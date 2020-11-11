@@ -25,6 +25,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $data['css'] = 'home/style.css';
+        $data['js'] = 'home/script.js';
+        return view('home.home',$data);
     }
 }

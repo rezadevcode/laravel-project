@@ -30,7 +30,12 @@
     content: ">";
     color: #A6B1B1;
 }
-
+.title .breadcrumb .breadcrumb-item{
+    font-size: 14px;
+}
+.breadcrumb-item.active{
+    font-weight: 600;
+}
 .breadcrumb-item.active,
 .breadcrumb-item a {
     color: #A6B1B1;
@@ -44,6 +49,7 @@
     padding: 12px 24px;
 }
 .title .card .card-body h1 {
+    font-family: 'MaisonNeue-Bold';
     font-size: 24px;
     margin: 0;
 }
@@ -106,6 +112,7 @@
     right: 140px;
     top: 50%;
     transform: translateY(-50%);
+    font-weight: 700;
 }
 #sorter .form-group {
     margin-bottom: 0;
@@ -130,7 +137,7 @@
     margin-bottom: 12px;
 }
 .content-category .card-text {
-    font-size: 12px;
+    font-size: 14px;
 }
 .content-category .price {
     color: #00AA13;
@@ -138,7 +145,12 @@
     margin-top: 12px;
 }
 
-
+.load-more .btn {
+    margin: 24px auto;
+    width: max-content;
+    padding: 8px 24px;
+    border-radius: 20px;
+}
 
 
 /* RESPONSIVENESS */

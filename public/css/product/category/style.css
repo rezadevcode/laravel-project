@@ -23,11 +23,16 @@
     background: no-repeat;
     margin-bottom: 8px;
 }
+.title .breadcrumb .breadcrumb-item{
+    font-size: 14px;
+}
 .breadcrumb-item+.breadcrumb-item::before {
     content: ">";
     color: #A6B1B1;
 }
-
+.breadcrumb-item.active{
+    font-weight: 600;
+}
 .breadcrumb-item.active,
 .breadcrumb-item a {
     color: #A6B1B1;
@@ -41,6 +46,7 @@
     padding: 12px 24px;
 }
 .title .card .card-body h1 {
+    font-family: 'MaisonNeue-Bold';
     font-size: 24px;
     margin: 0;
 }
@@ -57,6 +63,8 @@
     margin-bottom: 22px;
 }
 .category p {
+    font-family: 'MaisonNeue-Bold';
+    color: #1C1D1D;
     margin: 0;
     white-space: nowrap;
     overflow: hidden;

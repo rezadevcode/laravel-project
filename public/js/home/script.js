@@ -8,6 +8,7 @@ $(document).ready(function () {
         spaceBetween: 10,
         centeredSlides: true,
         freeMode: true,
+        loop: true,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -37,10 +38,10 @@ $(document).ready(function () {
     });
 
     /** Swiper JS Config - Popular Section */
-    new Swiper('.swiper-popular', {
-        slidesPerView: 'auto',
-        spaceBetween: 10,
-        freeMode: true,
-    });
+    // new Swiper('.swiper-popular', {
+    //     slidesPerView: 'auto',
+    //     spaceBetween: 10,
+    //     freeMode: true,
+    // });
 
 });

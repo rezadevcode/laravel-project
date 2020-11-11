@@ -35,4 +35,5 @@ Route::get('/login', 'LoginController@index');
 Route::group(['prefix' => 'product'], function () {
     Route::get('/category', 'ProductController@category');
     Route::get('/list', 'ProductController@lists');
+    Route::get('/detail', 'ProductController@detail');
 });
