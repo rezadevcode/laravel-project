@@ -23,12 +23,14 @@ class ProductController extends Controller
     {
         $data['css'] = 'product/list/style.css';
         $data['js'] = 'product/list/script.js';
+        $data['titlepage'] = 'product list';
         return view('product/lists',$data);
     }
 
     public function category()
     {
         $data['css'] = 'product/category/style.css';
+        $data['titlepage'] = 'product category';
         return view('product/category',$data);
     }
 
@@ -36,6 +38,7 @@ class ProductController extends Controller
     {
         $data['css'] = 'product/detail/style.css';
         $data['js'] = 'product/detail/script.js';
+        $data['titlepage'] = 'product detail';
         return view('product/detail',$data);
     }
 }

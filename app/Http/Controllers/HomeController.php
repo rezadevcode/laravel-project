@@ -27,6 +27,7 @@ class HomeController extends Controller
     {
         $data['css'] = 'home/style.css';
         $data['js'] = 'home/script.js';
+        $data['titlepage'] = 'home';
         return view('home.home',$data);
     }
 }
