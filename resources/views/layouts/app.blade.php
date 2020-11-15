@@ -22,7 +22,7 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <img src="{{ asset('images/logo/gojek.png') }}" alt="logo">
                 </a>
-                <div class="collapse navbar-collapse" id="navbarNav">
+                {{-- <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a href="{{ url('product/category') }}">
@@ -61,7 +61,7 @@
                             </div>
                         </li>
                     </ul>
-                </div>
+                </div> --}}
             </nav>
         </header>
         <!-- End Navbar Section -->

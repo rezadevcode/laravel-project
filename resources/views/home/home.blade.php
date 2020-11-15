@@ -6,11 +6,9 @@
             <div class="swiper-container swiper-hero">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide"><img src="{{ asset('images/banner.png') }}" class="d-block w-100"></div>
+                    <div class="swiper-slide"><img src="{{ asset('images/banner-1.png') }}" class="d-block w-100"></div>
                     <div class="swiper-slide"><img src="{{ asset('images/banner.png') }}" class="d-block w-100"></div>
-                    <div class="swiper-slide"><img src="{{ asset('images/banner.png') }}" class="d-block w-100"></div>
-                    <div class="swiper-slide"><img src="{{ asset('images/banner.png') }}" class="d-block w-100"></div>
-                    <div class="swiper-slide"><img src="{{ asset('images/banner.png') }}" class="d-block w-100"></div>
-                    <div class="swiper-slide"><img src="{{ asset('images/banner.png') }}" class="d-block w-100"></div>
+                    <div class="swiper-slide"><img src="{{ asset('images/banner-1.png') }}" class="d-block w-100"></div>
                 </div>
 
                 <!-- Add Pagination -->
@@ -113,25 +111,25 @@
                             </div>
                         </li>
                         <li class="track step-3 col-2">
-                            <img src="{{ asset('images/icon/status_order/active/approval.png') }}" alt="approval">
+                            <img src="{{ asset('images/icon/status_order/deactive/approval.png') }}" alt="approval">
                             <div class="description">
                                 <p>Leader Approval</p>
                             </div>
                         </li>
                         <li class="track step-4 col-2">
-                            <img src="{{ asset('images/icon/status_order/active/prepare.png') }}" alt="prepare">
+                            <img src="{{ asset('images/icon/status_order/deactive/prepare.png') }}" alt="prepare">
                             <div class="description">
                                 <p>Preparing Asset</p>
                             </div>
                         </li>
                         <li class="track step-5 col-2">
-                            <img src="{{ asset('images/icon/status_order/active/pickup.png') }}" alt="pickup">
+                            <img src="{{ asset('images/icon/status_order/deactive/pickup.png') }}" alt="pickup">
                             <div class="description">
                                 <p>Pick Up</p>
                             </div>
                         </li>
                         <li class="track step-6 col-2">
-                            <img src="{{ asset('images/icon/status_order/active/completed.png') }}" alt="completed">
+                            <img src="{{ asset('images/icon/status_order/deactive/completed.png') }}" alt="completed">
                             <div class="description">
                                 <p>Order Completed</p>
                             </div>
@@ -178,7 +176,7 @@
             </div>
         </section>
 
-        <section class="product-list">
+        <section class="product-list recomendation">
             <div class="row">
                 <div class="col col-lg-2 col-md-3 col-sm-6">
                     <div class="card">

@@ -42,6 +42,15 @@ body{
 .pd-0{
     padding: 0;
 }
+body a{
+    color: #1C1D1D;
+}
+body a:hover{
+    text-decoration: none;
+    color: #1C1D1D;
+}
+/* ----------header------------- */
+
 .navbar {
     background: #FFFFFF;
     box-shadow: 0px 4px 15px rgba(51, 51, 51, 0.12);
@@ -67,10 +76,10 @@ body{
     margin: auto 12px;
 }
 .navbar-collapse .navbar-nav .nav-item:nth-child(1) {
-    min-width: 10%;
+    min-width: 20%;
 }
 .navbar-collapse .navbar-nav .nav-item:nth-child(2) {
-    min-width: 50%;
+    min-width: 30%;
     margin-right: 36px;
 }
 .navbar-collapse .navbar-nav .nav-item:nth-child(6) {
@@ -100,29 +109,8 @@ body{
     margin-left: 8px;
     color: #676F6F;
 }
-.title .breadcrumb .breadcrumb-item{
-    font-size: 14px;
-}
-.breadcrumb-item.active{
-    font-weight: 600;
-}
-.card-body{
-    padding: 10px 8px !important;
-}
-.product-list .card-body p{
-    margin-bottom: 5px;
-    font-size: 14px;
-}
-.product-list .card a{
-    color: #1C1D1D;
-}
-.product-list .card p:last-child {
-    font-weight: 700;
-    color: #DB3D40;
-}
 
-.navbar-nav form {
-}
+
 .navbar-nav form .input-group {
     width: 100%;
     background: #EEF3F1;
@@ -163,6 +151,38 @@ body{
     box-shadow: none;
 }
 
+.title .card .card-body h1{
+    font-family: 'MaisonNeue-Bold';
+    font-size: 24px;
+    margin: 0;
+}
+
+/* ----------recomendation------- */
+.product-list.recomendation .title.hd{
+    font-family: 'MaisonNeue-Bold';
+    font-size: 24px;
+}
+.product-list.recomendation .row .col {
+    margin-bottom: 16px;
+}
+.product-list.recomendation .card {
+    padding: 0;
+}
+.product-list.recomendation .card-body {
+    padding: 15px;
+}
+.product-list.recomendation .card p {
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+.product-list.recomendation .card p:last-child {
+    font-weight: 700;
+    color: #DB3D40;
+    margin-bottom: 0;
+}
+
+/* ----------footer------------- */
+
 footer {
     margin: 0;
     background: #EEF3F1;
@@ -171,9 +191,9 @@ footer {
 }
 
 footer p {
-    font-size: 15px;
-    margin: 0;
+    font-size: 16px;
 }
+
 
 /* RESPONSIVENESS */
 /* ----------------------------------------------------- */
@@ -184,5 +204,10 @@ footer p {
     }
     .navbar img {
         height: 24px;
+    }
+
+    /* footer */
+    footer p {
+        font-size: 13px;
     }
 }

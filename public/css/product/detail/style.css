@@ -246,6 +246,9 @@
     padding: 8px 16px;
     font-size: 14px;
 }
+.sticky-order .navbar .right-side .btn a{
+    color: #00AA13;
+}
 .sticky-order .navbar .right-side .btn:last-child:hover {
     background-color: inherit;
     color: #00AA13;

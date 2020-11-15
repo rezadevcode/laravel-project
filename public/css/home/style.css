@@ -34,7 +34,7 @@ section.product-list {
     margin: 16px auto;
 }
 
-.product-list .row .col {
+/* .product-list .row .col {
     margin-bottom: 16px;
 }
 .product-list .card {
@@ -46,7 +46,7 @@ section.product-list {
 .product-list .card p:last-child {
     font-weight: 700;
     color: #DB3D40;
-}
+} */
 
 
 /* SWIPER JS CUSTOMIZATION */
@@ -371,9 +371,6 @@ section.product-list {
 }
 .navbar img {
     height: 40px;
-}
-.navbar-collapse {
-
 }
 .navbar-collapse .navbar-nav {
     width: 100%;

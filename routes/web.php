@@ -37,3 +37,12 @@ Route::group(['prefix' => 'product'], function () {
     Route::get('/list', 'ProductController@lists');
     Route::get('/detail', 'ProductController@detail');
 });
+
+// order
+Route::group(['prefix' => 'order'], function () {
+    Route::get('/cart', 'OrderController@cart');
+    Route::get('/checkout', 'OrderController@checkout');
+    Route::get('/tracking', 'OrderController@tracking');
+    Route::get('/cancel', 'OrderController@cancel');
+    Route::get('/done', 'OrderController@done');
+});
