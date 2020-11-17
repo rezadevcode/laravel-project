@@ -90,7 +90,7 @@
         <section class="status-order">
             <div class="title">
                 Status Order
-                <a href="#" class="detail">See All <i class="fas fa-chevron-right"></i> </a>
+                <a href="{{ url('order/tracking') }}" class="detail">See All <i class="fas fa-chevron-right"></i> </a>
             </div>
             <div class="card">
                 <div class="item-order">Macbook Pro 2019</div>
@@ -402,4 +402,21 @@
         </section>
 
     </main>
+    <!-- Modal -->
+    <div class="modal fade" id="opening-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img src="{{ asset('images/condition/order-canceled.png') }}" alt="img-modal">
+                    {{-- <img src="../../assets/image/condition/order-canceled.png" alt="img-modal"> --}}
+                    <h3>Welcome, Jessy Milenia</h3>
+                    <p>
+                        Please complete your Profile below including 
+                        your organization information and your Heirarchy Leader.
+                    </p>
+                    <a href="../profile/main/index.html" class="btn btn-success">Click Here</a>
+                </div>
+            </div>
+        </div>
+    </div>
 @stop

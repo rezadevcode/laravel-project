@@ -54,4 +54,16 @@ class OrderController extends Controller
         $data['titlepage'] = 'order canceled';
         return view('order/cancel',$data);
     }
+    public function empty()
+    {
+        $data['css'] = '404.css';
+        $data['titlepage'] = 'order empty';
+        return view('order/cart_empty',$data);
+    }
+    public function empty_tracking()
+    {
+        $data['css'] = '404.css';
+        $data['titlepage'] = 'order empty';
+        return view('order/empty_tracking',$data);
+    }
 }

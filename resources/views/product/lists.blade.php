@@ -114,19 +114,42 @@
                 <div class="col col-lg-9 col-md-8 col-sm-12">
                     <div class="list-category">
                         <div class="row sort-title">
-                            <div class="col col-6 pd-0">
+                            <div class="col col-6">
                                 <p>Menampilkan 999 produk untuk "Gadget" </p>
-                            </div>
-                            <div id="sorter" class="col col-6">
-                                <span id="srt">Sorting</span>
                                 <div class="form-group">
                                     <i class="fas fa-chevron-down"></i>
-                                    <select class="form-control selection" id="company" name="company">
+                                    <select class="form-control selection" id="menu-category" name="menu-category">
+                                        <option></option>
+                                        <option>Asus</option>
+                                        <option>Evercoss</option>
+                                        <option>Galaxy</option>
+                                        <option>Huawei</option>
+                                        <option>iPhone</option>
+                                        <option>Lenovo</option>
+                                        <option>LG</option>
+                                        <option>Motorola</option>
+                                        <option>Nokia</option>
+                                        <option>OPPO</option>
+                                        <option>Realme</option>
+                                        <option>Samsung</option>
+                                        <option>Vivo</option>
+                                        <option>Xiaomi</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col col-6">
+                                <p id="srt">Sorting</p>
+                                <div class="form-group">
+                                    <i class="fas fa-chevron-down"></i>
+                                    <select class="form-control selection" id="sorting" name="sorting">
                                         <option>Relevant</option>
                                         <option>Terendah</option>
                                         <option>Tertinggi</option>
                                     </select>
                                 </div>
+                            </div>
+                            <div class="col col-12">
+                                <p>Menampilkan 999 produk untuk "Gadget"</p>
                             </div>
                         </div>
                         <div class="row content-category">

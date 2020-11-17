@@ -16,21 +16,94 @@
 </head>
 <body>
     <div class="container">
-        <!-- Navbar Section -->
         <header>
             <nav class="navbar navbar-expand-lg fixed-top">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    <img src="{{ asset('images/logo/gojek.png') }}" alt="logo">
-                </a>
-                {{-- <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-brand d-flex">
+                    <div class="mob-category d-lg-none" onclick="openNav()">
+                        <img src="{{ asset('images/category/category.png') }}" alt="ic-category">
+                    </div>
+                    <a href="{{ url('/') }}">
+                        <img src="{{ asset('images/logo/gojek.png') }}" alt="logo">
+                    </a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a href="{{ url('product/category') }}">
-                                <img src="{{ asset('images/category/category.png') }}" alt="ic-category">
-                                <span>Category</span>
-                            </a>
+                            <div class="category dropdown">
+                                <div class="dropdown-toggle" id="dropdown-category" data-toggle="dropdown">
+                                    <img src="{{ asset('images/category/category.png') }}" alt="ic-category">
+                                    <span>Category</span>
+                                </div>
+                                <div class="dropdown-menu">
+                                    <div class="item-title d-flex">
+                                        <p>Category</p>
+                                    </div>
+                                    <a class="dropdown-item" href="{{ url('product/list') }}">
+                                        Accessories
+                                        <i class="fas fa-chevron-right"></i>
+                                    </a>
+                                    <a class="dropdown-item" href="{{ url('product/list') }}">
+                                        Gadget
+                                        <i class="fas fa-chevron-right"></i>
+                                    </a>
+                                    <a class="dropdown-item" href="{{ url('product/list') }}">
+                                        Laptop / Desktop
+                                        <i class="fas fa-chevron-right"></i>
+                                    </a>
+                                    <a class="dropdown-item" href="{{ url('product/list') }}">
+                                        Monitor
+                                        <i class="fas fa-chevron-right"></i>
+                                    </a>
+                                    <a class="dropdown-item" href="{{ url('product/list') }}">
+                                        Network
+                                        <i class="fas fa-chevron-right"></i>
+                                    </a>
+                                    <a class="dropdown-item" href="{{ url('product/list') }}">
+                                        Peripheral Equipment
+                                        <i class="fas fa-chevron-right"></i>
+                                    </a>
+                                    <a class="dropdown-item" href="{{ url('product/list') }}">
+                                        Rack System
+                                        <i class="fas fa-chevron-right"></i>
+                                    </a>
+                                    <a class="dropdown-item" href="{{ url('product/list') }}">
+                                        Printer
+                                        <i class="fas fa-chevron-right"></i>
+                                    </a>
+                                    <a class="dropdown-item" href="{{ url('product/list') }}">
+                                        Storage External
+                                        <i class="fas fa-chevron-right"></i>
+                                    </a>
+                                    <a class="dropdown-item" href="{{ url('product/list') }}">
+                                        Storage Internal
+                                        <i class="fas fa-chevron-right"></i>
+                                    </a>
+                                    <a class="dropdown-item" href="{{ url('product/list') }}">
+                                        Voices
+                                        <i class="fas fa-chevron-right"></i>
+                                    </a>
+                                    <a class="dropdown-item" href="{{ url('product/list') }}">
+                                        RAM
+                                        <i class="fas fa-chevron-right"></i>
+                                    </a>
+                                    <a class="dropdown-item" href="{{ url('product/list') }}">
+                                        Software
+                                        <i class="fas fa-chevron-right"></i>
+                                    </a>
+                                    <a class="dropdown-item" href="{{ url('product/list') }}">
+                                        IT Services
+                                        <i class="fas fa-chevron-right"></i>
+                                    </a>
+                                    <a class="dropdown-item" href="{{ url('product/list') }}">
+                                        Monitoring
+                                        <i class="fas fa-chevron-right"></i>
+                                    </a>
+                                </div>
+                            </div>
                         </li>
-                        <li class="nav-item">
+
+                        <li class="nav-item mr-auto d-none d-sm-block d-md-block">
                             <form class="form-inline">
                                 <div class="input-group">
                                     <i class="fas fa-search"></i>
@@ -41,29 +114,227 @@
                                 </div>
                             </form>
                         </li>
-                        <li class="nav-item">
-                            <i class="fas fa-bell"></i>
-                        </li>
-                        <li class="nav-item">
-                            <i class="fas fa-shopping-cart"></i>
-                        </li>
-                        <div class="separator"></div>
-                        <li class="nav-item">
-                            <img src="{{ asset('images/icon/user.png') }}" alt="user">
-                            <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    user name
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Profile</a>
-                                    <a class="dropdown-item" href="#">Sign Out</a>
-                                </div>
-                            </div>
-                        </li>
+
                     </ul>
-                </div> --}}
+                </div>
+
+                <div id="rightnav">
+                    <div class="nav-item">
+    
+                        <div class="notification dropdown">
+                            <i class="fas fa-bell dropdown-toggle" id="dropdown-notif" data-toggle="dropdown"></i>
+                            <div class="dropdown-menu">
+                                <div class="item-title d-flex">
+                                    <p>Notification</p>
+                                </div>
+                                <a class="dropdown-item" href="{{ url('order/tracking') }}">
+                                    <p class="title">
+                                        <span>Order Arrived</span>
+                                        <span>&bull;</span>
+                                        <span>10.00</span>
+                                    </p>
+                                    <p class="content">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur.
+                                    </p>
+                                </a>
+                                <a class="dropdown-item" href="{{ url('order/tracking') }}">
+                                    <p class="title">
+                                        <span>Order Completed</span>
+                                        <span>&bull;</span>
+                                        <span>13.25</span>
+                                    </p>
+                                    <p class="content">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa voluptate assumenda voluptas aut magni.
+                                    </p>
+                                </a>
+                                <a class="dropdown-item" href="{{ url('order/tracking') }}">
+                                    <p class="title">
+                                        <span>Order Decline</span>
+                                        <span>&bull;</span>
+                                        <span>17.40</span>
+                                    </p>
+                                    <p class="content">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa voluptate assumenda voluptas aut magni.
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+    
+                        <div class="cart dropdown">
+                            <i class="fas fa-shopping-cart dropdown-toggle" id="dropdown-cart" data-toggle="dropdown"></i>
+                            <div class="dropdown-menu">
+                                <div class="item-title d-flex">
+                                    <p>Cart</p>
+                                    <a href="{{ url('order/cart') }}">
+                                        <span>Detail</span> 
+                                        <i class="fas fa-chevron-right"></i>
+                                    </a>
+                                </div>
+                                <a class="dropdown-item" href="{{ url('order/cart') }}">
+                                    <div class="media">
+                                        <img src="{{ asset('images/product/recommendation/samsung.png') }}" alt="img-cart">
+                                        <div class="media-body">
+                                            <h5 class="mt-0">Samsung Galaxy J8 SM-J810FZKATUR 32GB Black</h5>
+                                            <p class="item-price">Rp 5.000.000</p>
+                                            <p class="item-total">(Item 1x)</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item" href="{{ url('order/cart') }}">
+                                    <div class="media">
+                                        <img src="{{ asset('images/product/recommendation/macbook.png') }}" alt="img-cart">
+                                        <div class="media-body">
+                                            <h5 class="mt-0">Macbook Pro 2020 - Space Grey </h5>
+                                            <p class="item-price">Rp 20.000.000</p>
+                                            <p class="item-total">(Item 1x)</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+    
+                        <div class="separator"></div>
+    
+                        <div class="profile dropdown">
+                            <div class="profile-trigger dropdown-toggle" id="dropdown-profile" data-toggle="dropdown">
+                            <img src="{{ asset('images/icon/user.png') }}" alt="user">
+                                <button class="btn btn-secondary" type="button">
+                                    Jessy
+                                </button>
+                            </div>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="{{ url('profile') }}">
+                                    Profile
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                                <a class="dropdown-item" href="{{ url('login') }}">
+                                    Log Out
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
             </nav>
+
+            <!-- Sidebar on Mobile Screen -->
+            <div id="mySidenav" class="sidenav">
+                <div class="sidebar-title">
+                    <img src="{{ asset('images/category/category.png') }}" alt="category">
+                    <h3>Category</h3>
+                </div>
+                <div class="divider"></div>
+                <div class="menu-content">
+                    <a href="../product/list/specific_category/index.html">
+                        <div class="img-box">
+                            <img src="{{ asset('images/category/accessories.png') }}" alt="ic-accessories">
+                        </div>
+                        <span>Accessories</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <a href="../product/list/specific_category/index.html">
+                        <div class="img-box">
+                            <img src="{{ asset('images/category/gadget.png') }}" alt="ic-gadget">
+                        </div>
+                        <span>Gadget</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <a href="../product/list/specific_category/index.html">
+                        <div class="img-box">
+                            <img src="{{ asset('images/category/laptop.png') }}" alt="ic-category">
+                        </div>
+                        <span>Laptop/Desktop</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <a href="../product/list/specific_category/index.html">
+                        <div class="img-box">
+                            <img src="{{ asset('images/category/monitor.png') }}" alt="ic-category">
+                        </div>
+                        <span>Monitor</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <a href="../product/list/specific_category/index.html">
+                        <div class="img-box">
+                            <img src="{{ asset('images/category/network.png') }}" alt="ic-category">
+                        </div>
+                        <span>Network</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <a href="../product/list/specific_category/index.html">
+                        <div class="img-box">
+                            <img src="{{ asset('images/category/peripherals.png') }}" alt="ic-category">
+                        </div>
+                        <span>Peripheral Equipment</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <a href="../product/list/specific_category/index.html">
+                        <div class="img-box">
+                            <img src="{{ asset('images/category/rack.png') }}" alt="ic-category">
+                        </div>
+                        <span>Rack System</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <a href="../product/list/specific_category/index.html">
+                        <div class="img-box">
+                            <img src="{{ asset('images/category/printer.png') }}" alt="ic-category">
+                        </div>
+                        <span>Printer</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <a href="../product/list/specific_category/index.html">
+                        <div class="img-box">
+                            <img src="{{ asset('images/category/storage-external.png') }}" alt="ic-category">
+                        </div>
+                        <span>Storage External</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <a href="../product/list/specific_category/index.html">
+                        <div class="img-box">
+                            <img src="{{ asset('images/category/storage-internal.png') }}" alt="ic-category">
+                        </div>
+                        <span>Storage Internal</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <a href="../product/list/specific_category/index.html">
+                        <div class="img-box">
+                            <img src="{{ asset('images/category/voices.png') }}" alt="ic-category">
+                        </div>
+                        <span>Voice</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <a href="../product/list/specific_category/index.html">
+                        <div class="img-box">
+                            <img src="{{ asset('images/category/ram.png') }}" alt="ic-category">
+                        </div>
+                        <span>RAM</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <a href="../product/list/specific_category/index.html">
+                        <div class="img-box">
+                            <img src="{{ asset('images/category/software.png') }}" alt="ic-category">
+                        </div>
+                        <span>Software</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <a href="../product/list/specific_category/index.html">
+                        <div class="img-box">
+                            <img src="{{ asset('images/category/services.png') }}" alt="ic-services">
+                        </div>
+                        <span>IT Services</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <a href="../product/list/specific_category/index.html">
+                        <div class="img-box">
+                            <img src="{{ asset('images/category/monitoring.png') }}" alt="ic-monitoring">
+                        </div>
+                        <span>Monitoring</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
         </header>
+        <!-- End Navbar Section -->
         <!-- End Navbar Section -->
         <!-- Main Content -->
         @yield('content')
@@ -89,6 +360,7 @@
     @if(isset($js))
         <script src="{{ asset('js/'.$js) }}"></script>
     @endif
+    <script src="{{ asset('js/header.js') }}"></script>
 </body>
 
 </html>

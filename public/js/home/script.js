@@ -2,6 +2,9 @@
 
 $(document).ready(function () {
 
+    /** Show Opening Modal Automatically */
+    $('#opening-modal').modal('show')
+
     /** Swiper JS Config - Hero Section */
     new Swiper('.swiper-hero', {
         slidesPerView: 'auto',
@@ -38,10 +41,10 @@ $(document).ready(function () {
     });
 
     /** Swiper JS Config - Popular Section */
-    // new Swiper('.swiper-popular', {
-    //     slidesPerView: 'auto',
-    //     spaceBetween: 10,
-    //     freeMode: true,
-    // });
+    new Swiper('.swiper-popular', {
+        slidesPerView: 'auto',
+        spaceBetween: 10,
+        freeMode: true,
+    });
 
 });

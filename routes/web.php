@@ -45,4 +45,12 @@ Route::group(['prefix' => 'order'], function () {
     Route::get('/tracking', 'OrderController@tracking');
     Route::get('/cancel', 'OrderController@cancel');
     Route::get('/done', 'OrderController@done');
+    Route::get('/empty-cart', 'OrderController@empty');
+    Route::get('/empty-tracking', 'OrderController@empty_tracking');
+});
+
+// Profile
+Route::group(['prefix' => 'profile'], function () {
+    Route::get('/', 'ProfileController@index');
+    Route::get('/edit', 'ProfileController@edit');
 });
